@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruit Search!</title>
+    <title>Fruit Autocomplete</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="searchBody">
+      <div class="searchBarContainer">
+        <input
+          type="text"
+          name="fruit"
+          id="fruit"
+          placeholder="Search Fruit 🍎"
+          class="searchBar" />
+      </div>
+      <div class="suggestions">
+        <ul></ul>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

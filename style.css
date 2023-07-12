@@ -1,4 +1,63 @@
+* {
+  /* box-sizing: border-box; */
+}
+
+:focus {
+  /* TODO */
+}
+
 body {
   padding: 0;
   margin: 0;
+  background-image: linear-gradient(to right, yellow, rgba(255, 115, 0, 0.986));
+  box-sizing: border-box;
+}
+.searchBody {
+  width: 500px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 400px auto;
+  background: white;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
+  color: black;
+}
+
+.searchBarContainer input,
+.suggestions {
+  /* TODO */
+}
+.searchBarContainer input {
+  /* TODO */
+}
+.suggestions {
+  /* TODO */
+}
+
+ul {
+  /* TODO */
+}
+ul.has-suggestions {
+  /* TODO */
+}
+ul li {
+  /* TODO */
+}
+ul li:hover {
+  /* TODO */
 }
