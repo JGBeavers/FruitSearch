@@ -83,6 +83,7 @@ const fruit = [
   'Yuzu',
 ];
 
+// on keyup in input field, get str and filter fruit array for all elements that include str and add to results array
 function searchHandler(e) {
   let results = [];
   let inputBox = input.value;
@@ -91,9 +92,11 @@ function searchHandler(e) {
       return word.toLowerCase().includes(inputBox.toLowerCase());
     });
   }
+  // display results as dynamic dropdown
   showSuggestions(results);
 }
 
+// get each element in results and create list element, append to ul
 function showSuggestions(results) {
   const resultsLi = results.map((li) => {
     return '<li class="list">' + li + '</li>';
@@ -102,6 +105,7 @@ function showSuggestions(results) {
   suggestions.innerHTML = resultsLi.join('');
 }
 
+// on click, populate input field with selected fruit and clear results
 function useSuggestion(e) {
   input.value = e.target.innerText;
   suggestions.innerHTML = '';
