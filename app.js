@@ -83,24 +83,28 @@ const fruit = [
   'Yuzu',
 ];
 
-function search(str) {
-  let results = [];
-
-  // TODO
-
-  return results;
-}
-
 function searchHandler(e) {
-  // TODO
+  let results = [];
+  let inputBox = input.value;
+  if (inputBox.length !== 0) {
+    results = fruit.filter((word) => {
+      return word.toLowerCase().includes(inputBox.toLowerCase());
+    });
+  }
+  showSuggestions(results);
 }
 
-function showSuggestions(results, inputVal) {
-  // TODO
+function showSuggestions(results) {
+  const resultsLi = results.map((li) => {
+    return '<li class="list">' + li + '</li>';
+  });
+
+  suggestions.innerHTML = resultsLi.join('');
 }
 
 function useSuggestion(e) {
-  // TODO
+  input.value = e.target.innerText;
+  suggestions.innerHTML = '';
 }
 
 input.addEventListener('keyup', searchHandler);
